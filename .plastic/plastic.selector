@@ -1,0 +1,4 @@
+repository "Dear junior sister@ssl://sisf@sh01-plasticscm.unity.cn:8787"
+  path "/"
+    smartbranch "/main/tpjkl0912dhcg" 
+     
