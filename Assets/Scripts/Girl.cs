@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardController : MonoBehaviour
+public class Girl : MonoBehaviour
 {
-    Animator anim;
-    // Start is called before the first frame update
+    protected Animator anim;
     void Awake()
     {
         anim = GetComponent<Animator>();
     }
-    
+
     void ResetAnimation()
     {
         anim.SetBool("isLookUp", false);
@@ -18,7 +17,7 @@ public class WizardController : MonoBehaviour
         anim.SetBool("isJump", false);
     }
 
-    public void Run()
+    public virtual void Run()
     {
         ResetAnimation();
         anim.SetBool("isRun", true);

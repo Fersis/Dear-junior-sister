@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 188136841}
   - component: {fileID: 188136840}
   m_Layer: 5
-  m_Name: Wizard Run (3)
+  m_Name: Cat Girl Run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 188136841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1120378282}
+        m_TargetAssemblyTypeName: Girl, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &188136841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +344,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674161413164302, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df, type: 3}
       propertyPath: m_Name
-      value: Little_Cat_Girl
+      value: Cat Girl
       objectReference: {fileID: 0}
     - target: {fileID: 4497445806554122, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df, type: 3}
       propertyPath: m_RootOrder
@@ -352,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497445806554122, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.08
+      value: 0.934
       objectReference: {fileID: 0}
     - target: {fileID: 4497445806554122, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -621,7 +633,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1360847168}
-        m_TargetAssemblyTypeName: WizardController, Assembly-CSharp
+        m_TargetAssemblyTypeName: Girl, Assembly-CSharp
         m_MethodName: Run
         m_Mode: 1
         m_Arguments:
@@ -670,6 +682,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615052474}
   m_CullTransparentMesh: 1
+--- !u!1 &638582983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1694388104871626409, guid: 678bf8bc91771fa498236de892b83d1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1809164589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &638582984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638582983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac283a2d66ef9f409bbbcd51246bc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 1038726340}
 --- !u!1 &782145874
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +793,7 @@ GameObject:
   - component: {fileID: 847508655}
   - component: {fileID: 847508654}
   m_Layer: 5
-  m_Name: Wizard Run (1)
+  m_Name: f
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,7 +862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 847508655}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 638582984}
+        m_TargetAssemblyTypeName: JuniorSister, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &847508655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +992,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876019103}
   m_CullTransparentMesh: 1
+--- !u!1 &1038726338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038726339}
+  - component: {fileID: 1038726341}
+  - component: {fileID: 1038726340}
+  m_Layer: 5
+  m_Name: Dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1038726339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038726338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1973942438}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -322, y: 244}
+  m_SizeDelta: {x: 510.1884, y: 58.1618}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1038726340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038726338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sorry, I haven't learned to run yet.
+--- !u!222 &1038726341
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038726338}
+  m_CullTransparentMesh: 1
+--- !u!1 &1120378278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1524083921592610, guid: eef7dbc3fcb9a6b4db5e157a8e96c3df,
+    type: 3}
+  m_PrefabInstance: {fileID: 227556883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1120378282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120378278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a637609fab79bff458e34a455bc975cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1221139984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1346,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360847167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1c18dacc9f9ba4d96ae412f7fef089, type: 3}
+  m_Script: {fileID: 11500000, guid: d862a176dc14aa54db6bd013038d4400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1669809419
@@ -1222,7 +1362,7 @@ GameObject:
   - component: {fileID: 1669809422}
   - component: {fileID: 1669809421}
   m_Layer: 5
-  m_Name: Wizard Run (2)
+  m_Name: Kindergartner Run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,7 +1431,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1669809422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2131531085}
+        m_TargetAssemblyTypeName: Girl, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1669809422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1405,7 +1557,7 @@ PrefabInstance:
     - target: {fileID: 1694388104871626409, guid: 678bf8bc91771fa498236de892b83d1d,
         type: 3}
       propertyPath: m_Name
-      value: Casual1
+      value: Junior Sister
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 678bf8bc91771fa498236de892b83d1d, type: 3}
@@ -1580,6 +1732,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 217497843}
+  - {fileID: 1038726339}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1588,3 +1741,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2131531082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9178090177391721229, guid: 037845a52a053c14e90209ee8f80e06c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1360687795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2131531085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131531082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f28942dfe52ad44a51a7fd08500176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
