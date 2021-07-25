@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Wizard : Girl
 {
-    
+    void Start()
+    {
+        damage_taken = 5;
+    }
 }
