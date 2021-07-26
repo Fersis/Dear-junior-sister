@@ -6,6 +6,6 @@ public class Wizard : Girl
 {
     void Start()
     {
-        damage_taken = 5;
+        DamageTaken = 5;
     }
 }

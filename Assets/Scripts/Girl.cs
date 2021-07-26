@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class Girl : MonoBehaviour
 {
-    protected Animator anim;
+    // Auto-implemented property
+    public Animator Anim { get; set; }
 
-    private float _damage_taken;
-    public float damage_taken
+    private float _damageTaken;
+    public float DamageTaken
     {
         get
         {
-            return _damage_taken;
+            return _damageTaken;
         }
         set
         {
@@ -23,7 +24,7 @@ public class Girl : MonoBehaviour
             }
             else
             {
-                _damage_taken = value;
+                _damageTaken = value;
             }
         }
     }
@@ -32,31 +33,31 @@ public class Girl : MonoBehaviour
 
     void Awake()
     {
-        anim = GetComponent<Animator>();
+        Anim = GetComponent<Animator>();
     }
 
     void ResetAnimation()
     {
-        anim.SetBool("isLookUp", false);
-        anim.SetBool("isRun", false);
-        anim.SetBool("isJump", false);
+        Anim.SetBool("isLookUp", false);
+        Anim.SetBool("isRun", false);
+        Anim.SetBool("isJump", false);
     }
 
     public virtual void Run()
     {
         ResetAnimation();
-        anim.SetBool("isRun", true);
+        Anim.SetBool("isRun", true);
     }
 
     public virtual void HurtAction()
     {
         ResetAnimation();
-        anim.SetTrigger("hurt");
+        Anim.SetTrigger("hurt");
     }
 
     void HurtText()
     {
-        StartCoroutine(ShowTakenDamage(_damage_taken, 0.3f));
+        StartCoroutine(ShowTakenDamage(DamageTaken, 0.3f));
     }
 
     public void Hurt()

@@ -6,17 +6,17 @@ public class CatGirl : Girl
 {
     void Start()
     {
-        damage_taken = 3;
+        DamageTaken = 3;
     }
     
     public override void Run()
     {
-        anim.SetBool("isRun", true);
+        Anim.SetBool("isRun", true);
     }
 
     public override void HurtAction()
     {
-        anim.SetBool("isRun", false);
-        anim.SetTrigger("hurt");
+        Anim.SetBool("isRun", false);
+        Anim.SetTrigger("hurt");
     }
 }

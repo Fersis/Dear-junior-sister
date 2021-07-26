@@ -6,6 +6,6 @@ public class Kindergartner : Girl
 {
     void Start()
     {
-        damage_taken = 10;
+        DamageTaken = 10;
     }
 }
