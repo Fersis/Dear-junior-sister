@@ -9,12 +9,13 @@ public class CatGirl : Girl
         DamageTaken = 3;
     }
     
+    // Polymorphism
     public override void Run()
     {
         Anim.SetBool("isRun", true);
     }
 
-    public override void HurtAction()
+    public override void DoHurtAction()
     {
         Anim.SetBool("isRun", false);
         Anim.SetTrigger("hurt");

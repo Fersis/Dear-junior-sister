@@ -8,6 +8,7 @@ public class Girl : MonoBehaviour
     // Auto-implemented property
     public Animator Anim { get; set; }
 
+    // Encapsulation
     private float _damageTaken;
     public float DamageTaken
     {
@@ -29,18 +30,12 @@ public class Girl : MonoBehaviour
         }
     }
 
-    [SerializeField] protected Text damage_taken_text;
+    [SerializeField]
+    Text DamageTakenText;
 
     void Awake()
     {
         Anim = GetComponent<Animator>();
-    }
-
-    void ResetAnimation()
-    {
-        Anim.SetBool("isLookUp", false);
-        Anim.SetBool("isRun", false);
-        Anim.SetBool("isJump", false);
     }
 
     public virtual void Run()
@@ -49,28 +44,36 @@ public class Girl : MonoBehaviour
         Anim.SetBool("isRun", true);
     }
 
-    public virtual void HurtAction()
+    // Abstraction
+    void ResetAnimation()
+    {
+        Anim.SetBool("isLookUp", false);
+        Anim.SetBool("isRun", false);
+        Anim.SetBool("isJump", false);
+    }
+
+    public void Hurt()
+    {
+        DoHurtAction();
+        ShowHurtText();
+    }
+
+    public virtual void DoHurtAction()
     {
         ResetAnimation();
         Anim.SetTrigger("hurt");
     }
 
-    void HurtText()
+    void ShowHurtText()
     {
         StartCoroutine(ShowTakenDamage(DamageTaken, 0.3f));
     }
 
-    public void Hurt()
+    IEnumerator ShowTakenDamage(float damageTaken, float delay)
     {
-        HurtAction();
-        HurtText();
-    }
-
-    IEnumerator ShowTakenDamage(float damage_taken, float delay)
-    {
-        damage_taken_text.text = "-" + damage_taken;
-        damage_taken_text.gameObject.SetActive(true);
+        DamageTakenText.text = "-" + damageTaken;
+        DamageTakenText.gameObject.SetActive(true);
         yield return new WaitForSeconds(delay);
-        damage_taken_text.gameObject.SetActive(false);
+        DamageTakenText.gameObject.SetActive(false);
     }
 }
