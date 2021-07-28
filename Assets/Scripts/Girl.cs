@@ -52,7 +52,7 @@ public class Girl : MonoBehaviour
         Anim.SetBool("isJump", false);
     }
 
-    public void Hurt()
+    void OnMouseDown()
     {
         DoHurtAction();
         ShowHurtText();
